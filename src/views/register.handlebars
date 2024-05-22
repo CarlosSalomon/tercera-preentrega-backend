@@ -1,0 +1,40 @@
+<div class="background-register">
+
+<div class="container-register">
+    <form action="/register" method="POST">
+        
+        <div class="mb-3"> 
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+            <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+        </div>
+         <div class="mb-3"> 
+            <label for="exampleInputfirst_name1" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="exampleInputfirst_name1"  name="first_name">
+        </div>
+        <div class="mb-3"> 
+            <label for="exampleInputLast_name1" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="exampleInputLast_name1" name="last_name">
+        </div>
+        <div class="mb-3"> 
+            <label for="exampleInputAge1" class="form-label">Edad</label>
+            <input type="number" class="form-control" id="exampleInputAge1" name="age">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+        </div>
+
+        <div class="cont-btn">
+        <button type="submit" class="signup-btn1">Registrate</button>
+       </div>
+    </form>
+    {{#if error}}
+        <div class="alert alert-danger" role="alert">
+            {{error}}
+        </div>
+    {{/if}}
+</div>
+
+</div>
+

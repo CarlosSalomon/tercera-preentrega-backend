@@ -1,0 +1,28 @@
+
+    {{>navBar}}
+<div class="container-md">
+  <h1 class="mt-4 mb-4 bg-opacity-8 border rounded text-center">Perfil de
+    Usuario</h1>
+
+  <div class="mt-4 pt-3 mb-4 bg-opacity-8 border rounded text-center">
+    <h3>Bienvenido {{user.first_name}}</h3>
+    <p><strong>Nombre: </strong>{{user.first_name}} {{user.last_name}} </p>
+    <p><strong>Email: </strong> {{user.email}}</p>
+    <p><strong>Edad: </strong>: </strong>{{user.age}}</p>
+    <p><strong>uid: </strong>: </strong>{{user._id}}</p>
+    <div class="d-flex justify-content-center">
+      <p class="my-auto"><strong>Rol: </strong>{{user.rol}}</p>
+      <button
+        id="changeRole"
+        data-user-id="{{user._id}}"
+        data-user-rol="{{user.rol}}"
+        data-user-email="{{user.email}}"
+        class="btn btn-outline-secondary mx-3"
+      >Modificar Rol</button>
+    </div>
+    <p> <strong>IdCart: </strong> {{user.cartId}} </p>
+   
+  </div>
+</div>
+<script src="/js/profile.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
